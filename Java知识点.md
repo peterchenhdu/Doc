@@ -20,3 +20,13 @@ H-B关系
 在 Windows 下，你可以按下 Ctrl + Break来获取。这样JVM就会将线程的dump文件打印到标准输出或错误文件中，它可能打印在控制台或者日志文件中，具体位置依赖应用的配置。</br>
 
 <strong>Java中，int类型变量的长度是一个固定值，与平台无关，都是32位。</strong></br>
+
+<strong>Struts2 流程</strong></br>
+重点关注以下几个角色：</br>
+FilterDispatcher</br></br></br>
+ActionMapper</br></br>
+ActionProxy</br>
+ConfigurationManager</br>
+ActionInvocation</br>
+Interceptor</br>
+http请求->其它filter->FilterDispatcher，询问ActionMapper是否需要struts2处理该请求，是的话，FilterDispatcher->ActionProxy,ActionProxy访问ConfigurationManager，ConfigurationManager访问struts2.xml得到相关配置信息，ActionProxy创建ActionInvocation对象，负责action的具体执行，执行前后经过一系列的Interceptor，最后将执行的result渲染template，返回；</br>
