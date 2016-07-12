@@ -23,8 +23,8 @@ H-B关系
 
 <strong>Struts2 流程</strong></br>
 重点关注以下几个角色：</br>
-FilterDispatcher</br></br></br>
-ActionMapper</br></br>
+FilterDispatcher</br>
+ActionMapper</br>
 ActionProxy</br>
 ConfigurationManager</br>
 ActionInvocation</br>
