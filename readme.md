@@ -35,3 +35,4 @@ http请求->其它filter->FilterDispatcher，询问ActionMapper是否需要strut
 1、select * from table where time=(select max(time) from table )</br>
 2、select * from (select * from table ORDER BY time desc) a limit 0,1</br>
 经测试，在mysql中第一种快于第二种</br>
+## test
